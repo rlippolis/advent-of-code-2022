@@ -7,4 +7,7 @@ object Utils {
             .readText()
             .let { if (trimStart) it.trimStart() else it }
             .let { if (trimEnd) it.trimEnd() else it }
+
+    fun IntRange.overlapsWith(other: IntRange) = (last >= other.first) && (other.last >= first)
+    fun IntRange.contains(other: IntRange) = other.first in this && other.last in this
 }
