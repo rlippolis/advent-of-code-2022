@@ -1,0 +1,21 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.7.21'
+}
+
+group 'com.jdriven.riccardo'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    testImplementation "org.junit.jupiter:junit-jupiter:5.9.1"
+}
+
+test {
+    // jvmArgs("-Xmx24G")
+    useJUnitPlatform()
+}
